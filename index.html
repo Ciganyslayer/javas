@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
+    <title>Javascript Gyakorló</title>
+    <link rel="stylesheet" href="szep.css">
 </head>
+
 <body>
-    <!--<script> console.log("Hello World!"); </script>-->
-
-    <script src="test.js""></script>
     <h1>Javascript gyakorló</h1>
-    <p>Ez egy javascript gyakorló felület</p>
+    <p id="udvozles">Ez egy javascript gyakorló felület</p>
 
-    <button onclick="document.write('Hello World!')">Click me</button>
-    <button onclick="document.write('<h1> Hello World! </h1>')">Click to clear</button>
+    <button onclick="document.getElementById('udvozles').innerText = 'Hello World!'">Click me</button>
+    <button onclick="document.getElementById('udvozles').innerHTML = '<h1>Hello World!</h1>'">Click to clear</button>
+
+    <hr>
 
     <div>
-        <p>Kép beillesztese szoveg ala</p>
+        <p>Kép beillesztése szöveg alá</p>
         <p id="kep_helye"></p>
         <button onclick="Kep_betesz()">Pick open</button>
         <button onclick="Kep_elrejt()">Pick close</button>
     </div>
+
+    <script src="test.js"></script>
+
+
+
+
+
+
+    <hr>
+    <div id="box" style="padding: 20px; border: 1px solid black; width: 200px; text-align: center;">
+        <p id="box_text">Nappali mód</p>
+    </div>
+
+    <button onclick="stilusValtas()">Sötét mód</button>
+    <button onclick="stilusAlaphelyzet()">Alaphelyzet</button>
 </body>
+
 </html>
